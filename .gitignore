@@ -1,4 +1,4 @@
-# Environment variables
+  # Environment variables
 .env
 
 # Node modules
@@ -30,3 +30,29 @@ __pycache__/
 # Keys
 *.pem
 *.key
+ # env
+.env
+*.env
+
+# python
+__pycache__/
+*.pyc
+
+# database
+*.db
+
+# temp files
+temp_storage/
+
+# vscode
+.vscode/
+
+# uploads
+*.pdf
+*.png
+*.jpg
+*.jpeg
+*.webp
+
+# node
+node_modules/
