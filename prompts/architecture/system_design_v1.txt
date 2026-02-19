@@ -1,0 +1,18 @@
+5. prompts/architecture/system_design_v1.txt
+
+
+Architectural Vision:
+
+1. Engine: Python FastAPI + Redis + Celery for Asynchronous Producer-Consumer Processing.
+
+2. Intelligence Layer: Prompt-driven LLM parsing (Gemini/OpenAI). Highly optimized context window by limiting input to first 2 pages of OCR text.
+
+3. OCR Layer: Decoupled architecture. Supported engines: Tesseract (current), built to support AWS Textract or Azure Form Recognizer in the future.
+
+4. Storage Strategy:
+    - SQLite for transactional metadata.
+    - Local Storage/S3 for physical document storage.
+
+5. Reliability: Multi-stage pipeline: OCR -> Parser (LLM) -> Reviewer (Auditor LLM) -> Database Persistence.
+
+6. Security Philosophy: PII (Personally Identifiable Information) masking during LLM transmission (planned/optional).

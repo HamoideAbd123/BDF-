@@ -1,0 +1,8 @@
+1. User uploads document.
+2. Backend triggers Celery task.
+3. Task runs OCR (limited to 2 pages).
+4. Task runs Gemini extraction (Flash model).
+5. Frontend polls for status.
+6. Frontend displays data for review.
+7. User approves/fixes data.
+8. Backend updates database.

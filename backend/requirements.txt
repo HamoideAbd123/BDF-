@@ -1,0 +1,26 @@
+# Web Framework & Server
+fastapi
+uvicorn[standard]
+python-multipart
+
+# Task Queue
+celery
+redis
+
+# Database (استخدام النسخة الثنائية الجاهزة لويندوز)
+psycopg-binary
+sqlalchemy
+
+# AI & Data Extraction
+openai
+google-generativeai
+pdfplumber
+pymupdf
+pytesseract
+Pillow
+
+# Utilities
+python-dotenv
+pydantic
+pydantic-settings
+httpx

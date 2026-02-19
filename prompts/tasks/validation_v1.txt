@@ -1,0 +1,13 @@
+Task: Validate the JSON output of the Parser.
+
+Validation Logic:
+1. Check if subtotal + tax_amount equals total_amount.
+2. Flag any invoice where the date is in the future.
+3. Verify that the vendor_name is not a generic term like "Customer".
+
+Output Format:
+If valid: {"status": "valid"}
+If invalid: {"status": "invalid", "reasons": [string, ...]}
+
+Input JSON:
+{input_json}

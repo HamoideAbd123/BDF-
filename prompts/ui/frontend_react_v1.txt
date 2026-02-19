@@ -1,0 +1,7 @@
+The frontend is a Next.js application using Tailwind CSS.
+It should handle:
+- File upload (PDF/Images)
+- Polling for results
+- Displaying a review table
+- Allowing manual edits and submission.
+Maintain a "Dark Mode" aesthetic with glassmorphism.

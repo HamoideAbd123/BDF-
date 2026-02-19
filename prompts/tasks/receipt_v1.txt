@@ -1,0 +1,29 @@
+Task: Extract key-value pairs from the following receipt OCR text.
+
+Target Schema: 
+{ 
+    "vendor_info": { 
+        "name": string, 
+        "tax_id": string, 
+        "address": string 
+    }, 
+    "invoice_details": { 
+        "number": string, 
+        "date": "YYYY-MM-DD"
+    }, 
+    "financials": { 
+        "total_amount": float, 
+        "currency": "ISO 4217 code" 
+    }, 
+    "items": [
+      {
+        "description": string,
+        "quantity": number,
+        "unit_price": float,
+        "total_price": float
+      }
+    ],
+    "confidence_score": float (0-1) 
+}
+
+OCR Input: {{ocr_text}}

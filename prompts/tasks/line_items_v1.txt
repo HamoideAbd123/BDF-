@@ -1,0 +1,7 @@
+Extract all line items from the document.
+For each item, find:
+- Description
+- Quantity
+- Unit Price
+- Total Amount
+Return as a list under "line_items" key.
