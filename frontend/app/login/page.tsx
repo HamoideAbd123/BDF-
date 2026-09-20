@@ -18,7 +18,13 @@ export default function LoginPage() {
 
     const result = mode === 'login'
       ? await supabase.auth.signInWithPassword({ email, password })
-      : await supabase.auth.signUp({ email, password })
+      : await supabase.auth.signUp({
+          email,
+          password,
+          options: {
+            emailRedirectTo: `${window.location.origin}/auth/confirm`,
+          },
+        })
 
     if (result.error) {
       setMessage(result.error.message)
@@ -27,7 +33,7 @@ export default function LoginPage() {
     }
 
     if (mode === 'signup') {
-      setMessage('Account created. Check your email if confirmation is enabled.')
+      setMessage('Account created. Check your email to confirm the account.')
       setLoading(false)
       return
     }
